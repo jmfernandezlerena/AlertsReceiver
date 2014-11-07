@@ -116,11 +116,8 @@
 			children = (
 				DD3C4E1B1A0D2E44002856AE /* Logging */,
 				DD3C4E161A0D2D75002856AE /* App Delegate */,
-				DD3C4DF71A0D294B002856AE /* ViewController.h */,
-				DD3C4DF81A0D294B002856AE /* ViewController.m */,
-				DD3C4DFA1A0D294C002856AE /* Main.storyboard */,
-				DD3C4DFD1A0D294C002856AE /* Images.xcassets */,
-				DD3C4DFF1A0D294C002856AE /* LaunchScreen.xib */,
+				DD3C4E231A0D35E8002856AE /* View Controllers */,
+				DD3C4E221A0D35D5002856AE /* Views */,
 				DD3C4E1D1A0D3180002856AE /* ORM */,
 				DD3C4DED1A0D294B002856AE /* Supporting Files */,
 			);
@@ -188,6 +185,25 @@
 				DD3C4E1F1A0D318F002856AE /* CoreDataManager.m */,
 			);
 			name = Manager;
+			sourceTree = "<group>";
+		};
+		DD3C4E221A0D35D5002856AE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C4DFA1A0D294C002856AE /* Main.storyboard */,
+				DD3C4DFD1A0D294C002856AE /* Images.xcassets */,
+				DD3C4DFF1A0D294C002856AE /* LaunchScreen.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		DD3C4E231A0D35E8002856AE /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C4DF71A0D294B002856AE /* ViewController.h */,
+				DD3C4DF81A0D294B002856AE /* ViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
