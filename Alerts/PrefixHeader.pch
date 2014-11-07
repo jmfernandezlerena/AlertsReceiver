@@ -1,0 +1,28 @@
+//
+//  PrefixHeader.pch
+//  Alerts
+//
+//  Created by Juan Miguel Fernández Lerena on 7/11/14.
+//  Copyright (c) 2014 jmfernandezlerenaios. All rights reserved.
+//
+
+#ifndef Alerts_PrefixHeader_pch
+#define Alerts_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+// LOGGING: CocoaLumberjack.
+#import <CocoaLumberjack/DDLog.h>
+#import <CocoaLumberjack/DDASLLogger.h>
+#import <CocoaLumberjack/DDTTYLogger.h>
+#import <CocoaLumberjack/DDDispatchQueueLogFormatter.h>
+#import <CocoaLumberjack/DDFileLogger.h>
+#ifdef DEBUG
+// Log levels: off, error, warn, info, verbose
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+#else
+static const int ddLogLevel = LOG_LEVEL_ERROR;
+#endif
+
+#endif

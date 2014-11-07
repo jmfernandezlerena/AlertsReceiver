@@ -16,6 +16,8 @@
 		DD3C4DFE1A0D294C002856AE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD3C4DFD1A0D294C002856AE /* Images.xcassets */; };
 		DD3C4E011A0D294C002856AE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3C4DFF1A0D294C002856AE /* LaunchScreen.xib */; };
 		DD3C4E0D1A0D294C002856AE /* AlertsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3C4E0C1A0D294C002856AE /* AlertsTests.m */; };
+		DD3C4E1A1A0D2E3F002856AE /* LoggingService.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3C4E191A0D2E3F002856AE /* LoggingService.m */; };
+		DD3C4E201A0D318F002856AE /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3C4E1F1A0D318F002856AE /* CoreDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,11 @@
 		DD3C4E061A0D294C002856AE /* AlertsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlertsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD3C4E0B1A0D294C002856AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD3C4E0C1A0D294C002856AE /* AlertsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertsTests.m; sourceTree = "<group>"; };
+		DD3C4E181A0D2E3F002856AE /* LoggingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoggingService.h; sourceTree = "<group>"; };
+		DD3C4E191A0D2E3F002856AE /* LoggingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoggingService.m; sourceTree = "<group>"; };
+		DD3C4E1C1A0D30EC002856AE /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		DD3C4E1E1A0D318F002856AE /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		DD3C4E1F1A0D318F002856AE /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		E5D305ED80B5B71375D814F7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E9C1F77DF2DB334A2EFAC6E0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,14 +114,14 @@
 		DD3C4DEC1A0D294B002856AE /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
-				DD3C4DF11A0D294B002856AE /* AppDelegate.h */,
-				DD3C4DF21A0D294B002856AE /* AppDelegate.m */,
+				DD3C4E1B1A0D2E44002856AE /* Logging */,
+				DD3C4E161A0D2D75002856AE /* App Delegate */,
 				DD3C4DF71A0D294B002856AE /* ViewController.h */,
 				DD3C4DF81A0D294B002856AE /* ViewController.m */,
 				DD3C4DFA1A0D294C002856AE /* Main.storyboard */,
 				DD3C4DFD1A0D294C002856AE /* Images.xcassets */,
 				DD3C4DFF1A0D294C002856AE /* LaunchScreen.xib */,
-				DD3C4DF41A0D294B002856AE /* Alerts.xcdatamodeld */,
+				DD3C4E1D1A0D3180002856AE /* ORM */,
 				DD3C4DED1A0D294B002856AE /* Supporting Files */,
 			);
 			path = Alerts;
@@ -125,6 +132,7 @@
 			children = (
 				DD3C4DEE1A0D294B002856AE /* Info.plist */,
 				DD3C4DEF1A0D294B002856AE /* main.m */,
+				DD3C4E1C1A0D30EC002856AE /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -144,6 +152,42 @@
 				DD3C4E0B1A0D294C002856AE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD3C4E161A0D2D75002856AE /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C4DF11A0D294B002856AE /* AppDelegate.h */,
+				DD3C4DF21A0D294B002856AE /* AppDelegate.m */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		DD3C4E1B1A0D2E44002856AE /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C4E181A0D2E3F002856AE /* LoggingService.h */,
+				DD3C4E191A0D2E3F002856AE /* LoggingService.m */,
+			);
+			name = Logging;
+			sourceTree = "<group>";
+		};
+		DD3C4E1D1A0D3180002856AE /* ORM */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C4DF41A0D294B002856AE /* Alerts.xcdatamodeld */,
+				DD3C4E211A0D3194002856AE /* Manager */,
+			);
+			name = ORM;
+			sourceTree = "<group>";
+		};
+		DD3C4E211A0D3194002856AE /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C4E1E1A0D318F002856AE /* CoreDataManager.h */,
+				DD3C4E1F1A0D318F002856AE /* CoreDataManager.m */,
+			);
+			name = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +242,11 @@
 					DD3C4DE91A0D294B002856AE = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = 3BH66APJMC;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					DD3C4E051A0D294C002856AE = {
 						CreatedOnToolsVersion = 6.1;
@@ -282,9 +331,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD3C4E201A0D318F002856AE /* CoreDataManager.m in Sources */,
 				DD3C4DF31A0D294B002856AE /* AppDelegate.m in Sources */,
 				DD3C4DF01A0D294B002856AE /* main.m in Sources */,
 				DD3C4DF91A0D294B002856AE /* ViewController.m in Sources */,
+				DD3C4E1A1A0D2E3F002856AE /* LoggingService.m in Sources */,
 				DD3C4DF61A0D294B002856AE /* Alerts.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +462,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Alerts/PrefixHeader.pch;
 				INFOPLIST_FILE = Alerts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -423,6 +476,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Alerts/PrefixHeader.pch;
 				INFOPLIST_FILE = Alerts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

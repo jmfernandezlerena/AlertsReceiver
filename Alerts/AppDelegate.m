@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "LoggingService.h"
+#import "CoreDataManager.h"
 
 @interface AppDelegate ()
 
@@ -14,114 +16,156 @@
 
 @implementation AppDelegate
 
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+#pragma mark application:didFinishLaunchingWithOptions:
+/*!
+ 
+ */
+- (BOOL)application:(UIApplication *)application
+didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    // CONFIGURAR LOGGING.
+    [[LoggingService sharedInstance] configure];
+    
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application {
+#pragma mark applicationWillResignActive:
+/*!
+ 
+ */
+- (void)applicationWillResignActive:(UIApplication *)application
+{
+    DDLogVerbose(([NSString stringWithFormat:@"%@...%@", NSStringFromClass([self class]), @"applicationWillResignActive:"]));
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    // Saves changes in the application's managed object context before the application terminates.
+    [[CoreDataManager sharedInstance] saveContext];
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
+#pragma mark applicationDidEnterBackground:
+/*!
+ 
+ */
+- (void)applicationDidEnterBackground:(UIApplication *)application
+{
+    DDLogVerbose(([NSString stringWithFormat:@"%@...%@", NSStringFromClass([self class]), @"applicationDidEnterBackground:"]));
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
-    [self saveContext];
+    [[CoreDataManager sharedInstance] saveContext];
 }
 
-#pragma mark - Core Data stack
-
-@synthesize managedObjectContext = _managedObjectContext;
-@synthesize managedObjectModel = _managedObjectModel;
-@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
-
-- (NSURL *)applicationDocumentsDirectory {
-    // The directory the application uses to store the Core Data store file. This code uses a directory named "es.jmfernandezlerenaios.alertsreceiver.Alerts" in the application's documents directory.
-    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
-}
-
-- (NSManagedObjectModel *)managedObjectModel {
-    // The managed object model for the application. It is a fatal error for the application not to be able to find and load its model.
-    if (_managedObjectModel != nil) {
-        return _managedObjectModel;
-    }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Alerts" withExtension:@"momd"];
-    _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
-    return _managedObjectModel;
-}
-
-- (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
-    // The persistent store coordinator for the application. This implementation creates and return a coordinator, having added the store for the application to it.
-    if (_persistentStoreCoordinator != nil) {
-        return _persistentStoreCoordinator;
-    }
+#pragma mark applicationWillEnterForeground:
+/*!
+ 
+ */
+- (void)applicationWillEnterForeground:(UIApplication *)application
+{
+    DDLogVerbose(([NSString stringWithFormat:@"%@...%@", NSStringFromClass([self class]), @"applicationWillEnterForeground:"]));
+    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     
-    // Create the coordinator and store
-    
-    _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Alerts.sqlite"];
-    NSError *error = nil;
-    NSString *failureReason = @"There was an error creating or loading the application's saved data.";
-    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
-        // Report any error we got.
-        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-        dict[NSLocalizedDescriptionKey] = @"Failed to initialize the application's saved data";
-        dict[NSLocalizedFailureReasonErrorKey] = failureReason;
-        dict[NSUnderlyingErrorKey] = error;
-        error = [NSError errorWithDomain:@"YOUR_ERROR_DOMAIN" code:9999 userInfo:dict];
-        // Replace this with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
-    
-    return _persistentStoreCoordinator;
 }
 
-
-- (NSManagedObjectContext *)managedObjectContext {
-    // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.)
-    if (_managedObjectContext != nil) {
-        return _managedObjectContext;
-    }
+#pragma mark applicationDidBecomeActive:
+/*!
+ 
+ */
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    DDLogVerbose(([NSString stringWithFormat:@"%@...%@", NSStringFromClass([self class]), @"applicationDidBecomeActive:"]));
+    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     
-    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
-    if (!coordinator) {
-        return nil;
-    }
-    _managedObjectContext = [[NSManagedObjectContext alloc] init];
-    [_managedObjectContext setPersistentStoreCoordinator:coordinator];
-    return _managedObjectContext;
 }
 
-#pragma mark - Core Data Saving support
+#pragma mark applicationWillTerminate:
+/*!
+ 
+ */
+- (void)applicationWillTerminate:(UIApplication *)application
+{
+    DDLogVerbose(([NSString stringWithFormat:@"%@...%@", NSStringFromClass([self class]), @"applicationWillTerminate:"]));
+    // Saves changes in the application's managed object context before the application terminates.
+    [[CoreDataManager sharedInstance] saveContext];
+}
 
-- (void)saveContext {
-    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
-    if (managedObjectContext != nil) {
-        NSError *error = nil;
-        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
-        }
+#pragma BACKGROUND FETCH.
+
+#pragma application:performFetchWithCompletionHandler:
+/*!
+ ACTUALIZACIONES EN BACKGROUND GESTIONADAS POR EL SISTEMA OPERATIVO.
+ */
+- (void)application:(UIApplication *)application
+performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+{
+    DDLogVerbose(([NSString stringWithFormat:@"%@...%@", NSStringFromClass([self class]), @"application:performFetchWithCompletionHandler:"]));
+    
+}
+
+#pragma NOTIFICACIONES PUSH.
+
+#pragma mark application:didRegisterForRemoteNotificationsWithDeviceToken
+/*!
+ PERMITE DETECTAR CUANDO EL USUARIO ACEPTA O DENIEGA EL USO DE NOTIFICACIONES PUSH EN NUESTRA APP.
+ */
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    DDLogVerbose(([NSString stringWithFormat:@"%@...%@", NSStringFromClass([self class]), @"didRegisterForRemoteNotificationsWithDeviceToken"]));
+    
+}
+
+#pragma mark application:didFailToRegisterForRemoteNotificationsWithError:
+/*!
+  PERMITE DETECTAR CUANDO EL USUARIO ACEPTA O DENIEGA EL USO DE NOTIFICACIONES PUSH EN NUESTRA APP.
+ */
+- (void)application:(UIApplication *)application
+didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+    DDLogVerbose(([NSString stringWithFormat:@"%@...%@", NSStringFromClass([self class]), @"application:didFailToRegisterForRemoteNotificationsWithError"]));
+    DDLogVerbose(@"El usuario no ha aceptado recibir notificaciones push de nuestra app");
+    if (error.code == 3010) {
+        DDLogVerbose(@"Push notifications are not supported in the iOS Simulator.");
+    } else {
+        // show some alert or otherwise handle the failure to register.
+        DDLogVerbose(@"application:didFailToRegisterForRemoteNotificationsWithError: %@", error);
     }
+}
+
+#pragma mark application:didReceiveRemoteNotification:
+/*!
+ 
+ */
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    DDLogVerbose(([NSString stringWithFormat:@"%@...%@", NSStringFromClass([self class]), @"application:didReceiveRemoteNotification:"]));
+    
+}
+
+#pragma mark application:handleActionWithIdentifier:forRemoteNotification:completionHandler:
+/*!
+ 
+ */
+- (void)application:(UIApplication *)application
+handleActionWithIdentifier:(NSString *)identifier
+forRemoteNotification:(NSDictionary *)userInfo
+  completionHandler:(void(^)())completionHandler
+{
+    DDLogVerbose(([NSString stringWithFormat:@"%@...%@", NSStringFromClass([self class]), @"application:handleActionWithIdentifier:forRemoteNotification:completionHandler:"]));
+    
+        completionHandler();
+}
+
+#pragma mark application:didReceiveRemoteNotification:fetchCompletionHandler:
+/*!
+ 
+ */
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo
+fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))handler
+{
+    DDLogVerbose(([NSString stringWithFormat:@"%@...%@", NSStringFromClass([self class]), @"application:didReceiveRemoteNotification:fetchCompletionHandler:"]));
+    
 }
 
 @end
