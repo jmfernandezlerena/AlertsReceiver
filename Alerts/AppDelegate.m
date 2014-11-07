@@ -27,6 +27,11 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     // CONFIGURAR LOGGING.
     [[LoggingService sharedInstance] configure];
     
+    // COMPROBAR LA LLAMADA DE OTRA APP.
+    if (![launchOptions objectForKey:UIApplicationLaunchOptionsURLKey]) {
+        // CASO: ERROR EN LA LLAMADA DE OTRA APP.
+    }
+    
     return YES;
 }
 
@@ -80,13 +85,23 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
 #pragma mark applicationWillTerminate:
 /*!
- 
+ APP CERRADA.
  */
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     DDLogVerbose(([NSString stringWithFormat:@"%@...%@", NSStringFromClass([self class]), @"applicationWillTerminate:"]));
     // Saves changes in the application's managed object context before the application terminates.
     [[CoreDataManager sharedInstance] saveContext];
+}
+
+#pragma mark application:handleOpenURL:
+/*!
+ PETICIÓN DE SERVICIO DESDE OTRA APP.
+ */
+- (BOOL)application:(UIApplication *)application
+      handleOpenURL:(NSURL *)url
+{
+    return YES;
 }
 
 #pragma BACKGROUND FETCH.
