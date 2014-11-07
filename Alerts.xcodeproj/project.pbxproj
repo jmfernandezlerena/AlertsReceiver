@@ -18,6 +18,8 @@
 		DD3C4E0D1A0D294C002856AE /* AlertsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3C4E0C1A0D294C002856AE /* AlertsTests.m */; };
 		DD3C4E1A1A0D2E3F002856AE /* LoggingService.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3C4E191A0D2E3F002856AE /* LoggingService.m */; };
 		DD3C4E201A0D318F002856AE /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3C4E1F1A0D318F002856AE /* CoreDataManager.m */; };
+		DD3C4E2A1A0D3A0E002856AE /* AlertsUI.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3C4E291A0D3A0E002856AE /* AlertsUI.m */; };
+		DD3C4E2C1A0D3A75002856AE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD3C4E2B1A0D3A75002856AE /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		DD3C4E1C1A0D30EC002856AE /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		DD3C4E1E1A0D318F002856AE /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		DD3C4E1F1A0D318F002856AE /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		DD3C4E281A0D3A0E002856AE /* AlertsUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertsUI.h; sourceTree = "<group>"; };
+		DD3C4E291A0D3A0E002856AE /* AlertsUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertsUI.m; sourceTree = "<group>"; };
+		DD3C4E2B1A0D3A75002856AE /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		E5D305ED80B5B71375D814F7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E9C1F77DF2DB334A2EFAC6E0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,7 +122,9 @@
 				DD3C4E1B1A0D2E44002856AE /* Logging */,
 				DD3C4E161A0D2D75002856AE /* App Delegate */,
 				DD3C4E231A0D35E8002856AE /* View Controllers */,
+				DD3C4E271A0D39C3002856AE /* Alerts UI */,
 				DD3C4E221A0D35D5002856AE /* Views */,
+				DD3C4E2D1A0D3A7C002856AE /* Texts */,
 				DD3C4E1D1A0D3180002856AE /* ORM */,
 				DD3C4DED1A0D294B002856AE /* Supporting Files */,
 			);
@@ -204,6 +211,23 @@
 				DD3C4DF81A0D294B002856AE /* ViewController.m */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		DD3C4E271A0D39C3002856AE /* Alerts UI */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C4E281A0D3A0E002856AE /* AlertsUI.h */,
+				DD3C4E291A0D3A0E002856AE /* AlertsUI.m */,
+			);
+			name = "Alerts UI";
+			sourceTree = "<group>";
+		};
+		DD3C4E2D1A0D3A7C002856AE /* Texts */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C4E2B1A0D3A75002856AE /* Localizable.strings */,
+			);
+			name = Texts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD3C4DFC1A0D294C002856AE /* Main.storyboard in Resources */,
+				DD3C4E2C1A0D3A75002856AE /* Localizable.strings in Resources */,
 				DD3C4E011A0D294C002856AE /* LaunchScreen.xib in Resources */,
 				DD3C4DFE1A0D294C002856AE /* Images.xcassets in Resources */,
 			);
@@ -353,6 +378,7 @@
 				DD3C4DF91A0D294B002856AE /* ViewController.m in Sources */,
 				DD3C4E1A1A0D2E3F002856AE /* LoggingService.m in Sources */,
 				DD3C4DF61A0D294B002856AE /* Alerts.xcdatamodeld in Sources */,
+				DD3C4E2A1A0D3A0E002856AE /* AlertsUI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

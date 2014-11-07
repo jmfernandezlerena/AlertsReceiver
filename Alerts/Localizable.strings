@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Alerts
+
+  Created by Juan Miguel Fernández Lerena on 7/11/14.
+  Copyright (c) 2014 jmfernandezlerenaios. All rights reserved.
+*/
+
+// NOMBRE DE LA APP EN LAS ALERTAS.
+"Alerts Receiver"="Alerts Receiver";

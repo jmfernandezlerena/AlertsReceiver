@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "LoggingService.h"
 #import "CoreDataManager.h"
+#import "AlertsUI.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +19,7 @@
 
 #pragma mark application:didFinishLaunchingWithOptions:
 /*!
- 
+ APP SE VA A ABRIR.
  */
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -31,7 +32,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
 #pragma mark applicationWillResignActive:
 /*!
- 
+ APP SE VA A OCULTAR.
  */
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -44,7 +45,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
 #pragma mark applicationDidEnterBackground:
 /*!
- 
+ APP OCULTA.
  */
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
@@ -57,7 +58,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
 #pragma mark applicationWillEnterForeground:
 /*!
- 
+ APP VA A VOLVER DEL ESTADO OCULTO.
  */
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
@@ -68,7 +69,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
 #pragma mark applicationDidBecomeActive:
 /*!
- 
+ APP YA ABIERTA POR PRIMERA VEZ O DEL ESTADO OCULTA.
  */
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
@@ -99,6 +100,8 @@ performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionH
 {
     DDLogVerbose(([NSString stringWithFormat:@"%@...%@", NSStringFromClass([self class]), @"application:performFetchWithCompletionHandler:"]));
     
+    // NOTIFICAR AL SO: UIBackgroundFetchResultNewData/UIBackgroundFetchResultFailed/UIBackgroundFetchResultNoData
+    completionHandler(UIBackgroundFetchResultNewData);
 }
 
 #pragma NOTIFICACIONES PUSH.
