@@ -21,7 +21,19 @@
 		DD3C4E2A1A0D3A0E002856AE /* AlertsUI.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3C4E291A0D3A0E002856AE /* AlertsUI.m */; };
 		DD3C4E2C1A0D3A75002856AE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD3C4E2B1A0D3A75002856AE /* Localizable.strings */; };
 		DD3C4E301A10AB37002856AE /* HandleOpenURLService.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3C4E2F1A10AB37002856AE /* HandleOpenURLService.m */; };
-		DD3C4E331A10ACE8002856AE /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = DD3C4E321A10ACE8002856AE /* Readme.txt */; };
+		DD3C4E351A10B2E7002856AE /* Alerts Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD3C4E341A10B2E7002856AE /* Alerts Property List.plist */; };
+		DD3C4E381A10B369002856AE /* AlertsPropertyList.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3C4E371A10B369002856AE /* AlertsPropertyList.m */; };
+		DD3C4E3E1A10B612002856AE /* ErrorService.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3C4E3D1A10B612002856AE /* ErrorService.m */; };
+		DD3C4E511A10B998002856AE /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3C4E401A10B998002856AE /* libGoogleAnalyticsServices.a */; };
+		DD3C4E581A10B9DC002856AE /* TrackingService.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3C4E571A10B9DC002856AE /* TrackingService.m */; };
+		DD3C4E5C1A10BD60002856AE /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3C4E5B1A10BD60002856AE /* libsqlite3.dylib */; };
+		DD3C4E5E1A10BDB6002856AE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3C4E5D1A10BDB6002856AE /* libz.dylib */; };
+		DD3C4E611A10BF5C002856AE /* UserSettingsService.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3C4E601A10BF5C002856AE /* UserSettingsService.m */; };
+		DD3C4E651A10CDD7002856AE /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3C4E641A10CDD7002856AE /* AdSupport.framework */; };
+		DD3C4E661A10CE1F002856AE /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3C4E3F1A10B998002856AE /* libAdIdAccess.a */; };
+		DD3C4E6D1A10D749002856AE /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DD3C4E6C1A10D749002856AE /* Settings.bundle */; };
+		DD3C4E711A10DD74002856AE /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = DD3C4E701A10DD74002856AE /* LICENSE.txt */; };
+		DDD62D3F1A111B64009702BD /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = DDD62D3E1A111B64009702BD /* CHANGELOG.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +72,42 @@
 		DD3C4E2B1A0D3A75002856AE /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		DD3C4E2E1A10AB37002856AE /* HandleOpenURLService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleOpenURLService.h; sourceTree = "<group>"; };
 		DD3C4E2F1A10AB37002856AE /* HandleOpenURLService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleOpenURLService.m; sourceTree = "<group>"; };
-		DD3C4E321A10ACE8002856AE /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		DD3C4E341A10B2E7002856AE /* Alerts Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Alerts Property List.plist"; sourceTree = "<group>"; };
+		DD3C4E361A10B369002856AE /* AlertsPropertyList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertsPropertyList.h; sourceTree = "<group>"; };
+		DD3C4E371A10B369002856AE /* AlertsPropertyList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertsPropertyList.m; sourceTree = "<group>"; };
+		DD3C4E3A1A10B580002856AE /* ErrorHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErrorHeader.h; sourceTree = "<group>"; };
+		DD3C4E3C1A10B612002856AE /* ErrorService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorService.h; sourceTree = "<group>"; };
+		DD3C4E3D1A10B612002856AE /* ErrorService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorService.m; sourceTree = "<group>"; };
+		DD3C4E3F1A10B998002856AE /* libAdIdAccess.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdIdAccess.a; sourceTree = "<group>"; };
+		DD3C4E401A10B998002856AE /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		DD3C4E411A10B998002856AE /* TAGContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGContainer.h; sourceTree = "<group>"; };
+		DD3C4E421A10B998002856AE /* TAGContainerOpener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGContainerOpener.h; sourceTree = "<group>"; };
+		DD3C4E431A10B998002856AE /* TAGDataLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGDataLayer.h; sourceTree = "<group>"; };
+		DD3C4E441A10B998002856AE /* TAGLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGLogger.h; sourceTree = "<group>"; };
+		DD3C4E451A10B998002856AE /* TAGManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGManager.h; sourceTree = "<group>"; };
+		DD3C4E461A10B998002856AE /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		DD3C4E471A10B998002856AE /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		DD3C4E481A10B998002856AE /* GAIEcommerceFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceFields.h; sourceTree = "<group>"; };
+		DD3C4E491A10B998002856AE /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProduct.h; sourceTree = "<group>"; };
+		DD3C4E4A1A10B998002856AE /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProductAction.h; sourceTree = "<group>"; };
+		DD3C4E4B1A10B998002856AE /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommercePromotion.h; sourceTree = "<group>"; };
+		DD3C4E4C1A10B998002856AE /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		DD3C4E4D1A10B998002856AE /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		DD3C4E4E1A10B998002856AE /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		DD3C4E4F1A10B998002856AE /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		DD3C4E561A10B9DC002856AE /* TrackingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackingService.h; sourceTree = "<group>"; };
+		DD3C4E571A10B9DC002856AE /* TrackingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackingService.m; sourceTree = "<group>"; };
+		DD3C4E5A1A10BCA1002856AE /* TrackingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackingHeader.h; sourceTree = "<group>"; };
+		DD3C4E5B1A10BD60002856AE /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		DD3C4E5D1A10BDB6002856AE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		DD3C4E5F1A10BF5C002856AE /* UserSettingsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSettingsService.h; sourceTree = "<group>"; };
+		DD3C4E601A10BF5C002856AE /* UserSettingsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSettingsService.m; sourceTree = "<group>"; };
+		DD3C4E631A10BFD7002856AE /* UserSettingsHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserSettingsHeader.h; sourceTree = "<group>"; };
+		DD3C4E641A10CDD7002856AE /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		DD3C4E6C1A10D749002856AE /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		DD3C4E6E1A10D99A002856AE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DD3C4E701A10DD74002856AE /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		DDD62D3E1A111B64009702BD /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		E5D305ED80B5B71375D814F7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E9C1F77DF2DB334A2EFAC6E0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,7 +117,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD3C4E651A10CDD7002856AE /* AdSupport.framework in Frameworks */,
+				DD3C4E661A10CE1F002856AE /* libAdIdAccess.a in Frameworks */,
 				3A9B4F7EC0E0B4E6E42821D9 /* libPods.a in Frameworks */,
+				DD3C4E511A10B998002856AE /* libGoogleAnalyticsServices.a in Frameworks */,
+				DD3C4E5E1A10BDB6002856AE /* libz.dylib in Frameworks */,
+				DD3C4E5C1A10BD60002856AE /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +139,9 @@
 		31693DCD1D1340B9FCBC06C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DD3C4E641A10CDD7002856AE /* AdSupport.framework */,
+				DD3C4E5D1A10BDB6002856AE /* libz.dylib */,
+				DD3C4E5B1A10BD60002856AE /* libsqlite3.dylib */,
 				4766896C91418E27F63D52DA /* libPods.a */,
 			);
 			name = Frameworks;
@@ -104,7 +159,10 @@
 		DD3C4DE11A0D294B002856AE = {
 			isa = PBXGroup;
 			children = (
-				DD3C4E321A10ACE8002856AE /* Readme.txt */,
+				DD3C4E701A10DD74002856AE /* LICENSE.txt */,
+				DD3C4E6E1A10D99A002856AE /* README.md */,
+				DDD62D3E1A111B64009702BD /* CHANGELOG.md */,
+				DD3C4E521A10B99D002856AE /* Frameworks */,
 				DD3C4DEC1A0D294B002856AE /* Alerts */,
 				DD3C4E091A0D294C002856AE /* AlertsTests */,
 				DD3C4DEB1A0D294B002856AE /* Products */,
@@ -126,8 +184,13 @@
 			isa = PBXGroup;
 			children = (
 				DD3C4E311A10AB3C002856AE /* Handle Open URL */,
+				DD3C4E391A10B36F002856AE /* Property List */,
+				DD3C4E3B1A10B587002856AE /* Errors */,
+				DD3C4E591A10B9E1002856AE /* Tracking */,
 				DD3C4E1B1A0D2E44002856AE /* Logging */,
+				DD3C4E621A10BF60002856AE /* User Settings */,
 				DD3C4E161A0D2D75002856AE /* App Delegate */,
+				DD3C4E691A10D030002856AE /* Settings */,
 				DD3C4E231A0D35E8002856AE /* View Controllers */,
 				DD3C4E271A0D39C3002856AE /* Alerts UI */,
 				DD3C4E221A0D35D5002856AE /* Views */,
@@ -142,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				DD3C4DEE1A0D294B002856AE /* Info.plist */,
+				DD3C4E341A10B2E7002856AE /* Alerts Property List.plist */,
 				DD3C4DEF1A0D294B002856AE /* main.m */,
 				DD3C4E1C1A0D30EC002856AE /* PrefixHeader.pch */,
 			);
@@ -246,6 +310,101 @@
 			name = "Handle Open URL";
 			sourceTree = "<group>";
 		};
+		DD3C4E391A10B36F002856AE /* Property List */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C4E361A10B369002856AE /* AlertsPropertyList.h */,
+				DD3C4E371A10B369002856AE /* AlertsPropertyList.m */,
+			);
+			name = "Property List";
+			sourceTree = "<group>";
+		};
+		DD3C4E3B1A10B587002856AE /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C4E3A1A10B580002856AE /* ErrorHeader.h */,
+				DD3C4E3C1A10B612002856AE /* ErrorService.h */,
+				DD3C4E3D1A10B612002856AE /* ErrorService.m */,
+			);
+			name = Errors;
+			sourceTree = "<group>";
+		};
+		DD3C4E521A10B99D002856AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C4E531A10B9A7002856AE /* Google Analytics */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD3C4E531A10B9A7002856AE /* Google Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C4E3F1A10B998002856AE /* libAdIdAccess.a */,
+				DD3C4E401A10B998002856AE /* libGoogleAnalyticsServices.a */,
+				DD3C4E541A10B9BA002856AE /* TagManager SDK */,
+				DD3C4E551A10B9C3002856AE /* Analytics SDK */,
+			);
+			name = "Google Analytics";
+			sourceTree = "<group>";
+		};
+		DD3C4E541A10B9BA002856AE /* TagManager SDK */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C4E411A10B998002856AE /* TAGContainer.h */,
+				DD3C4E421A10B998002856AE /* TAGContainerOpener.h */,
+				DD3C4E431A10B998002856AE /* TAGDataLayer.h */,
+				DD3C4E441A10B998002856AE /* TAGLogger.h */,
+				DD3C4E451A10B998002856AE /* TAGManager.h */,
+			);
+			name = "TagManager SDK";
+			sourceTree = "<group>";
+		};
+		DD3C4E551A10B9C3002856AE /* Analytics SDK */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C4E461A10B998002856AE /* GAI.h */,
+				DD3C4E471A10B998002856AE /* GAIDictionaryBuilder.h */,
+				DD3C4E481A10B998002856AE /* GAIEcommerceFields.h */,
+				DD3C4E491A10B998002856AE /* GAIEcommerceProduct.h */,
+				DD3C4E4A1A10B998002856AE /* GAIEcommerceProductAction.h */,
+				DD3C4E4B1A10B998002856AE /* GAIEcommercePromotion.h */,
+				DD3C4E4C1A10B998002856AE /* GAIFields.h */,
+				DD3C4E4D1A10B998002856AE /* GAILogger.h */,
+				DD3C4E4E1A10B998002856AE /* GAITrackedViewController.h */,
+				DD3C4E4F1A10B998002856AE /* GAITracker.h */,
+			);
+			name = "Analytics SDK";
+			sourceTree = "<group>";
+		};
+		DD3C4E591A10B9E1002856AE /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C4E5A1A10BCA1002856AE /* TrackingHeader.h */,
+				DD3C4E561A10B9DC002856AE /* TrackingService.h */,
+				DD3C4E571A10B9DC002856AE /* TrackingService.m */,
+			);
+			name = Tracking;
+			sourceTree = "<group>";
+		};
+		DD3C4E621A10BF60002856AE /* User Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C4E631A10BFD7002856AE /* UserSettingsHeader.h */,
+				DD3C4E5F1A10BF5C002856AE /* UserSettingsService.h */,
+				DD3C4E601A10BF5C002856AE /* UserSettingsService.m */,
+			);
+			name = "User Settings";
+			sourceTree = "<group>";
+		};
+		DD3C4E691A10D030002856AE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C4E6C1A10D749002856AE /* Settings.bundle */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -335,10 +494,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD3C4DFC1A0D294C002856AE /* Main.storyboard in Resources */,
+				DDD62D3F1A111B64009702BD /* CHANGELOG.md in Resources */,
 				DD3C4E2C1A0D3A75002856AE /* Localizable.strings in Resources */,
+				DD3C4E351A10B2E7002856AE /* Alerts Property List.plist in Resources */,
 				DD3C4E011A0D294C002856AE /* LaunchScreen.xib in Resources */,
-				DD3C4E331A10ACE8002856AE /* Readme.txt in Resources */,
 				DD3C4DFE1A0D294C002856AE /* Images.xcassets in Resources */,
+				DD3C4E6D1A10D749002856AE /* Settings.bundle in Resources */,
+				DD3C4E711A10DD74002856AE /* LICENSE.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,11 +553,15 @@
 			files = (
 				DD3C4E201A0D318F002856AE /* CoreDataManager.m in Sources */,
 				DD3C4DF31A0D294B002856AE /* AppDelegate.m in Sources */,
+				DD3C4E581A10B9DC002856AE /* TrackingService.m in Sources */,
 				DD3C4DF01A0D294B002856AE /* main.m in Sources */,
 				DD3C4E301A10AB37002856AE /* HandleOpenURLService.m in Sources */,
 				DD3C4DF91A0D294B002856AE /* ViewController.m in Sources */,
 				DD3C4E1A1A0D2E3F002856AE /* LoggingService.m in Sources */,
 				DD3C4DF61A0D294B002856AE /* Alerts.xcdatamodeld in Sources */,
+				DD3C4E381A10B369002856AE /* AlertsPropertyList.m in Sources */,
+				DD3C4E611A10BF5C002856AE /* UserSettingsService.m in Sources */,
+				DD3C4E3E1A10B612002856AE /* ErrorService.m in Sources */,
 				DD3C4E2A1A0D3A0E002856AE /* AlertsUI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,6 +692,10 @@
 				GCC_PREFIX_HEADER = Alerts/PrefixHeader.pch;
 				INFOPLIST_FILE = Alerts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -540,6 +710,10 @@
 				GCC_PREFIX_HEADER = Alerts/PrefixHeader.pch;
 				INFOPLIST_FILE = Alerts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

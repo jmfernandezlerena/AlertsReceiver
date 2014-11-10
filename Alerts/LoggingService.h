@@ -14,7 +14,7 @@
 /*!
  INSTANCIA.
  */
-+ (LoggingService*)sharedInstance;
++ (LoggingService *)sharedInstance;
 
 #pragma mark configure
 /*!

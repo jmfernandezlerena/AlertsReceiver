@@ -60,7 +60,9 @@ static HandleOpenURLService *_sharedInstance;
 - (void)checkLaunchOptionsURLKey:(NSDictionary *)launchOptions
 {
     DDLogVerbose(([NSString stringWithFormat:@"%@...%@", NSStringFromClass([self class]), @"application:handleOpenURL:"]));
-    
+    if (![launchOptions objectForKey:UIApplicationLaunchOptionsURLKey]) {
+        // CASO: ERROR EN LA LLAMADA DE OTRA APP.
+    }
 }
 
 @end

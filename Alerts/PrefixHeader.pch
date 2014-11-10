@@ -12,6 +12,13 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
+// PROPERTY LIST.
+#import "AlertsPropertyList.h"
+
+// ERRORES.
+#import "ErrorHeader.h"
+#import "ErrorService.h"
+
 // LOGGING: CocoaLumberjack.
 #import <CocoaLumberjack/DDLog.h>
 #import <CocoaLumberjack/DDASLLogger.h>
@@ -24,5 +31,10 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 #else
 static const int ddLogLevel = LOG_LEVEL_ERROR;
 #endif
+
+// TRACKING.
+#import "GAIDictionaryBuilder.h"
+#import "GAIFields.h"
+#import "GAI.h"
 
 #endif

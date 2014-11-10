@@ -27,7 +27,7 @@
 /*!
  INSTANCIA DE CORE DATA.
  */
-+ (CoreDataManager*)sharedInstance;
++ (CoreDataManager *)sharedInstance;
 
 #pragma mark saveContext
 /*!

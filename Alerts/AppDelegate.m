@@ -8,8 +8,11 @@
 
 #import "AppDelegate.h"
 #import "LoggingService.h"
+#import "TrackingService.h"
 #import "CoreDataManager.h"
 #import "AlertsUI.h"
+#import "HandleOpenURLService.h"
+#import "UserSettingsService.h"
 
 @interface AppDelegate ()
 
@@ -27,10 +30,14 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     // CONFIGURAR LOGGING.
     [[LoggingService sharedInstance] configure];
     
+    // CONFIGURAR TRACKING.
+    [[TrackingService sharedInstance] configure];
+    
+    // CONFIGURAR AJUSTES DE USUARIO.
+    [[UserSettingsService sharedInstance] updateInstalationSettings];
+    
     // COMPROBAR LA LLAMADA DE OTRA APP.
-    if (![launchOptions objectForKey:UIApplicationLaunchOptionsURLKey]) {
-        // CASO: ERROR EN LA LLAMADA DE OTRA APP.
-    }
+    [[HandleOpenURLService sharedInstance] checkLaunchOptionsURLKey:launchOptions];
     
     return YES;
 }
@@ -70,6 +77,9 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     DDLogVerbose(([NSString stringWithFormat:@"%@...%@", NSStringFromClass([self class]), @"applicationWillEnterForeground:"]));
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     
+    
+    // CONFIGURAR AJUSTES DE USUARIO.
+    [[UserSettingsService sharedInstance] updateInstalationSettings];
 }
 
 #pragma mark applicationDidBecomeActive:
@@ -101,6 +111,9 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 - (BOOL)application:(UIApplication *)application
       handleOpenURL:(NSURL *)url
 {
+    // PETICIÓN DE SERVICIO DESDE OTRA APP.
+    [[HandleOpenURLService sharedInstance] application:application
+                                         handleOpenURL:url];
     return YES;
 }
 

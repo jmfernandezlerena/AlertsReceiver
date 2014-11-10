@@ -8,3 +8,6 @@
 
 // NOMBRE DE LA APP EN LAS ALERTAS.
 "Alerts Receiver"="Alerts Receiver";
+
+// ERRORES.
+"Unexpected error"="Unexpected error";

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ID App Store</key>
+	<string>938799951</string>
+	<key>Google Analytics</key>
+	<dict>
+		<key>Tracking ID</key>
+		<string>UA-56575091-1</string>
+	</dict>
+</dict>
+</plist>

@@ -15,7 +15,7 @@
 /*!
  INSTANCIA.
  */
-+ (HandleOpenURLService*)sharedInstance;
++ (HandleOpenURLService *)sharedInstance;
 
 #pragma mark application:handleOpenURL:
 /*!

@@ -1,0 +1,7 @@
+Sample code project: Alerts Receiver
+Version: 1.0.0
+
+IMPORTANT:
+
+
+Copyright (C) 2014 jmfernandezlerenaios. All Rights Reserved.
