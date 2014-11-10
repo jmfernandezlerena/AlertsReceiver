@@ -20,6 +20,8 @@
 		DD3C4E201A0D318F002856AE /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3C4E1F1A0D318F002856AE /* CoreDataManager.m */; };
 		DD3C4E2A1A0D3A0E002856AE /* AlertsUI.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3C4E291A0D3A0E002856AE /* AlertsUI.m */; };
 		DD3C4E2C1A0D3A75002856AE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD3C4E2B1A0D3A75002856AE /* Localizable.strings */; };
+		DD3C4E301A10AB37002856AE /* HandleOpenURLService.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3C4E2F1A10AB37002856AE /* HandleOpenURLService.m */; };
+		DD3C4E331A10ACE8002856AE /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = DD3C4E321A10ACE8002856AE /* Readme.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,9 @@
 		DD3C4E281A0D3A0E002856AE /* AlertsUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertsUI.h; sourceTree = "<group>"; };
 		DD3C4E291A0D3A0E002856AE /* AlertsUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertsUI.m; sourceTree = "<group>"; };
 		DD3C4E2B1A0D3A75002856AE /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		DD3C4E2E1A10AB37002856AE /* HandleOpenURLService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleOpenURLService.h; sourceTree = "<group>"; };
+		DD3C4E2F1A10AB37002856AE /* HandleOpenURLService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleOpenURLService.m; sourceTree = "<group>"; };
+		DD3C4E321A10ACE8002856AE /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
 		E5D305ED80B5B71375D814F7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E9C1F77DF2DB334A2EFAC6E0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +104,7 @@
 		DD3C4DE11A0D294B002856AE = {
 			isa = PBXGroup;
 			children = (
+				DD3C4E321A10ACE8002856AE /* Readme.txt */,
 				DD3C4DEC1A0D294B002856AE /* Alerts */,
 				DD3C4E091A0D294C002856AE /* AlertsTests */,
 				DD3C4DEB1A0D294B002856AE /* Products */,
@@ -119,6 +125,7 @@
 		DD3C4DEC1A0D294B002856AE /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
+				DD3C4E311A10AB3C002856AE /* Handle Open URL */,
 				DD3C4E1B1A0D2E44002856AE /* Logging */,
 				DD3C4E161A0D2D75002856AE /* App Delegate */,
 				DD3C4E231A0D35E8002856AE /* View Controllers */,
@@ -230,6 +237,15 @@
 			name = Texts;
 			sourceTree = "<group>";
 		};
+		DD3C4E311A10AB3C002856AE /* Handle Open URL */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C4E2E1A10AB37002856AE /* HandleOpenURLService.h */,
+				DD3C4E2F1A10AB37002856AE /* HandleOpenURLService.m */,
+			);
+			name = "Handle Open URL";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -321,6 +337,7 @@
 				DD3C4DFC1A0D294C002856AE /* Main.storyboard in Resources */,
 				DD3C4E2C1A0D3A75002856AE /* Localizable.strings in Resources */,
 				DD3C4E011A0D294C002856AE /* LaunchScreen.xib in Resources */,
+				DD3C4E331A10ACE8002856AE /* Readme.txt in Resources */,
 				DD3C4DFE1A0D294C002856AE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +392,7 @@
 				DD3C4E201A0D318F002856AE /* CoreDataManager.m in Sources */,
 				DD3C4DF31A0D294B002856AE /* AppDelegate.m in Sources */,
 				DD3C4DF01A0D294B002856AE /* main.m in Sources */,
+				DD3C4E301A10AB37002856AE /* HandleOpenURLService.m in Sources */,
 				DD3C4DF91A0D294B002856AE /* ViewController.m in Sources */,
 				DD3C4E1A1A0D2E3F002856AE /* LoggingService.m in Sources */,
 				DD3C4DF61A0D294B002856AE /* Alerts.xcdatamodeld in Sources */,
