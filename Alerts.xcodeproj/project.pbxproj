@@ -34,6 +34,7 @@
 		DD3C4E6D1A10D749002856AE /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DD3C4E6C1A10D749002856AE /* Settings.bundle */; };
 		DD3C4E711A10DD74002856AE /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = DD3C4E701A10DD74002856AE /* LICENSE.txt */; };
 		DDD62D3F1A111B64009702BD /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = DDD62D3E1A111B64009702BD /* CHANGELOG.md */; };
+		DDD62D451A112613009702BD /* ACKNOWLEDGEMENTS.txt in Resources */ = {isa = PBXBuildFile; fileRef = DDD62D441A112613009702BD /* ACKNOWLEDGEMENTS.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		DD3C4E6E1A10D99A002856AE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DD3C4E701A10DD74002856AE /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		DDD62D3E1A111B64009702BD /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		DDD62D441A112613009702BD /* ACKNOWLEDGEMENTS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ACKNOWLEDGEMENTS.txt; sourceTree = "<group>"; };
 		E5D305ED80B5B71375D814F7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E9C1F77DF2DB334A2EFAC6E0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				DD3C4E701A10DD74002856AE /* LICENSE.txt */,
+				DDD62D441A112613009702BD /* ACKNOWLEDGEMENTS.txt */,
 				DD3C4E6E1A10D99A002856AE /* README.md */,
 				DDD62D3E1A111B64009702BD /* CHANGELOG.md */,
 				DD3C4E521A10B99D002856AE /* Frameworks */,
@@ -501,6 +504,7 @@
 				DD3C4DFE1A0D294C002856AE /* Images.xcassets in Resources */,
 				DD3C4E6D1A10D749002856AE /* Settings.bundle in Resources */,
 				DD3C4E711A10DD74002856AE /* LICENSE.txt in Resources */,
+				DDD62D451A112613009702BD /* ACKNOWLEDGEMENTS.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

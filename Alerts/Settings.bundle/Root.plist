@@ -2,42 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>StringsTable</key>
-	<string>Root</string>
 	<key>PreferenceSpecifiers</key>
 	<array>
-		<dict>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-			<key>Title</key>
-			<string></string>
-		</dict>
-		<dict>
-			<key>DefaultValue</key>
-			<string></string>
-			<key>Key</key>
-			<string>NSUserFirstName</string>
-			<key>Title</key>
-			<string>First</string>
-			<key>Type</key>
-			<string>PSTextFieldSpecifier</string>
-		</dict>
-		<dict>
-			<key>DefaultValue</key>
-			<string></string>
-			<key>Key</key>
-			<string>NSUserLastName</string>
-			<key>Title</key>
-			<string>Last</string>
-			<key>Type</key>
-			<string>PSTextFieldSpecifier</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-			<key>Title</key>
-			<string>Sounds</string>
-		</dict>
 		<dict>
 			<key>DefaultValue</key>
 			<integer>1</integer>
@@ -59,6 +25,32 @@
 				<integer>2</integer>
 				<integer>3</integer>
 			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>User</string>
+		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<string></string>
+			<key>Key</key>
+			<string>NSUserFirstName</string>
+			<key>Title</key>
+			<string>First</string>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<string></string>
+			<key>Key</key>
+			<string>NSUserLastName</string>
+			<key>Title</key>
+			<string>Last</string>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -98,7 +90,7 @@
 			<key>Title</key>
 			<string>Licence Agreement</string>
 			<key>File</key>
-			<string>Licence Agreement</string>
+			<string>LicenceAgreement</string>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -109,5 +101,7 @@
 			<string>Acknowledgements</string>
 		</dict>
 	</array>
+	<key>StringsTable</key>
+	<string>Root</string>
 </dict>
 </plist>
