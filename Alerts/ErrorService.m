@@ -49,23 +49,31 @@ static ErrorService *_sharedInstance;
 - (NSDictionary *)valueMsgForUserInfo:(NSDictionary *)userInfo
 {
     NSString *msgStr = NSLocalizedString(@"Unexpected error", nil);
-    if (userInfo) {
+    if (userInfo)
+    {
         NSEnumerator *enumerator = [userInfo keyEnumerator];
-        for (NSString *key in enumerator) {
-            if ([key isEqualToString:@"NSDebugDescription"]) {
+        for (NSString *key in enumerator)
+        {
+            if ([key isEqualToString:@"NSDebugDescription"])
                 // ERROR JSON.
+            {
                 msgStr = [userInfo objectForKey:@"NSDebugDescription"];
                 break;
-            } else if ([key isEqualToString:@"NSLocalizedDescription"]) {
+            }
+            else if ([key isEqualToString:@"NSLocalizedDescription"])
                 // ERROR AFNERWORKING.
+            {
                 msgStr = [userInfo objectForKey:@"NSLocalizedDescription"];
                 break;
-            } else if ([key isEqualToString:@"NSException"]) {
+            }
+            else if ([key isEqualToString:@"NSException"])
                 // ERROR AFNERWORKING.
+            {
                 msgStr = [userInfo objectForKey:@"NSException"];
                 break;
-            } else if ([key isEqualToString:@"UserMessage"]) {
+            } else if ([key isEqualToString:@"UserMessage"])
                 // MENSAJE DE USUARIO SI SE HA CREADO YA.
+            {
                 msgStr = [userInfo objectForKey:@"UserMessage"];
                 break;
             }

@@ -21,5 +21,7 @@
 #define NSUserLastName                              @"NSUserLastName"
 /*! KEY: SOUNDS. */
 #define NSUserSounds                                @"NSUserSounds"
+/*! KEY: SOUNDS SELECTED. */
+#define NSUserSoundsSelected                        @"NSUserSoundsSelected"
 
 #endif

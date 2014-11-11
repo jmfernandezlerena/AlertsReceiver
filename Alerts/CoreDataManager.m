@@ -26,7 +26,8 @@ static CoreDataManager* _sharedInstance;
 - (id)init
 {
     self = [super init];
-    if (self) {
+    if (self)
+    {
         _sharedInstance = self;
     }
     return self;
@@ -41,12 +42,14 @@ static CoreDataManager* _sharedInstance;
  */
 - (NSManagedObjectContext *)managedObjectContext
 {
-    if (_managedObjectContext != nil) {
+    if (_managedObjectContext != nil)
+    {
         return _managedObjectContext;
     }
     
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
-    if (coordinator != nil) {
+    if (coordinator != nil)
+    {
         _managedObjectContext = [[NSManagedObjectContext alloc] init];
         [_managedObjectContext setPersistentStoreCoordinator:coordinator];
     }
@@ -60,7 +63,8 @@ static CoreDataManager* _sharedInstance;
  */
 - (NSManagedObjectModel *)managedObjectModel
 {
-    if (_managedObjectModel != nil) {
+    if (_managedObjectModel != nil)
+    {
         return _managedObjectModel;
     }
     NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Alerts"
@@ -76,7 +80,8 @@ static CoreDataManager* _sharedInstance;
  */
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator
 {
-    if (_persistentStoreCoordinator != nil) {
+    if (_persistentStoreCoordinator != nil)
+    {
         return _persistentStoreCoordinator;
     }
     
@@ -88,11 +93,13 @@ static CoreDataManager* _sharedInstance;
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
     // En caso contrario, lo copiamos desde nuestro Sandbox
-    if (![fileManager fileExistsAtPath:storeURL.path]) {
+    if (![fileManager fileExistsAtPath:storeURL.path])
+    {
         
         NSURL *sandboxStoreURL = [[NSBundle mainBundle] URLForResource:@"Alerts"
                                                          withExtension:@"sqlite"];
-        if (sandboxStoreURL) {
+        if (sandboxStoreURL)
+        {
             [fileManager copyItemAtURL:sandboxStoreURL
                                  toURL:storeURL
                                  error:NULL];
@@ -105,7 +112,8 @@ static CoreDataManager* _sharedInstance;
                                                    configuration:nil
                                                              URL:storeURL
                                                          options:nil
-                                                           error:&error]) {
+                                                           error:&error])
+    {
         /*
          Replace this implementation with code to handle the error appropriately.
          
@@ -158,11 +166,13 @@ static CoreDataManager* _sharedInstance;
     DDLogVerbose(([NSString stringWithFormat:@"%@...%@", NSStringFromClass([self class]), @"saveContext"]));
     NSError *error = nil;
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
-    if (managedObjectContext != nil) {
+    if (managedObjectContext != nil)
+    {
         if ([managedObjectContext hasChanges]
-            && ![managedObjectContext save:&error]) {
+            && ![managedObjectContext save:&error])
             // Replace this implementation with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        {
             DDLogError(([NSString stringWithFormat:@"[ERROR] %@...%@", NSStringFromClass([self class]), [error userInfo]]));
         }
     }

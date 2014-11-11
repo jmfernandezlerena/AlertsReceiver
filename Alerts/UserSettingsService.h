@@ -16,6 +16,18 @@
  */
 + (UserSettingsService *)sharedInstance;
 
+#pragma mark addObserverDidChangeNotification
+/*!
+ OBSERVADOR DE MODIFICACIONES EN SETTINGS.
+ */
+- (void)addObserverDidChangeNotification;
+
+#pragma mark removeObserverDidChangeNotification
+/*!
+ ELIMINAR OBSERVADR DE MODIFICACIONES EN SETTINGS.
+ */
+- (void)removeObserverDidChangeNotification;
+
 #pragma mark updateInstalationSettings
 /*!
  CONFIGURAR INSTALACIÓN.

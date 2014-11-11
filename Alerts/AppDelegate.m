@@ -26,14 +26,16 @@
  */
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+{    
     // CONFIGURAR LOGGING.
     [[LoggingService sharedInstance] configure];
     
     // CONFIGURAR TRACKING.
     [[TrackingService sharedInstance] configure];
     
-    // CONFIGURAR AJUSTES DE USUARIO.
+    // OBSERVADOR DE MODIFICACIONES EN SETTINGS.
+    //[[UserSettingsService sharedInstance] addObserverDidChangeNotification];
+    // ACTUALZAR DATOS DE AJUSTES DE USUARIO.
     [[UserSettingsService sharedInstance] updateInstalationSettings];
     
     // COMPROBAR LA LLAMADA DE OTRA APP.
@@ -77,9 +79,6 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     DDLogVerbose(([NSString stringWithFormat:@"%@...%@", NSStringFromClass([self class]), @"applicationWillEnterForeground:"]));
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     
-    
-    // CONFIGURAR AJUSTES DE USUARIO.
-    [[UserSettingsService sharedInstance] updateInstalationSettings];
 }
 
 #pragma mark applicationDidBecomeActive:
@@ -100,6 +99,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     DDLogVerbose(([NSString stringWithFormat:@"%@...%@", NSStringFromClass([self class]), @"applicationWillTerminate:"]));
+    // ELIMINAR OBSERVADOR DE MODIFICACIONES EN SETTINGS.
+    [[UserSettingsService sharedInstance] removeObserverDidChangeNotification];
     // Saves changes in the application's managed object context before the application terminates.
     [[CoreDataManager sharedInstance] saveContext];
 }
@@ -154,10 +155,12 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
 {
     DDLogVerbose(([NSString stringWithFormat:@"%@...%@", NSStringFromClass([self class]), @"application:didFailToRegisterForRemoteNotificationsWithError"]));
     DDLogVerbose(@"El usuario no ha aceptado recibir notificaciones push de nuestra app");
-    if (error.code == 3010) {
+    if (error.code == 3010)
+    {
         DDLogVerbose(@"Push notifications are not supported in the iOS Simulator.");
-    } else {
+    } else
         // show some alert or otherwise handle the failure to register.
+    {
         DDLogVerbose(@"application:didFailToRegisterForRemoteNotificationsWithError: %@", error);
     }
 }
