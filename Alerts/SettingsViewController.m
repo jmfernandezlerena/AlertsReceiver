@@ -10,6 +10,12 @@
 #import "TrackingService.h"
 #import "AlertsUI.h"
 
+/*! NÚMERO DE SECCIONES. */
+#define NUMBER_OF_SECTIONS                              3
+
+/*! NÚMERO DE SECCIONES. */
+static const int numberSertionsSettings = NUMBER_OF_SECTIONS;
+
 @interface SettingsViewController ()
 
 @end
@@ -306,6 +312,27 @@
 #pragma MÉTODOS PRIVADOS.
 
 #pragma DELEGACIONES.
+
+#pragma UITableView Datasource
+
+#pragma mark numberOfSectionsInTableView:
+/*!
+ NÚMERO DE SECCIONES.
+ */
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return numberSertionsSettings;
+}
+
+//#pragma mark tableView:numberOfRowsInSection:
+///*!
+// NÚMERO DE CELDAS POR SECCIÓN.
+// */
+//- (NSInteger)tableView:(UITableView *)tableView
+// numberOfRowsInSection:(NSInteger)sectionIndex
+//{
+//    return numOptionsMenu;
+//}
 
 #pragma ACCIONES.
 
