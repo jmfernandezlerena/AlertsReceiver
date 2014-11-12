@@ -57,6 +57,8 @@
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
 			<string></string>
+			<key>FooterText</key>
+			<string>Delete all alerts received.</string>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -73,6 +75,8 @@
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
 			<string>About</string>
+			<key>FooterText</key>
+			<string>Copyright © 2014 jmfernandezlerenaios. All Rights Reserved.</string>
 		</dict>
 		<dict>
 			<key>Type</key>

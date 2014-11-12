@@ -26,7 +26,7 @@
  */
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{    
+{
     // CONFIGURAR LOGGING.
     [[LoggingService sharedInstance] configure];
     
@@ -34,7 +34,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     [[TrackingService sharedInstance] configure];
     
     // OBSERVADOR DE MODIFICACIONES EN SETTINGS.
-    //[[UserSettingsService sharedInstance] addObserverDidChangeNotification];
+    [[UserSettingsService sharedInstance] addObserverDidChangeNotification];
     // ACTUALZAR DATOS DE AJUSTES DE USUARIO.
     [[UserSettingsService sharedInstance] updateInstalationSettings];
     

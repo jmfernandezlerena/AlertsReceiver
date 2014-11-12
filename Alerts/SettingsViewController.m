@@ -1,20 +1,20 @@
 //
-//  HomeViewControllerr.m
+//  SettingsViewController.m
 //  Alerts
 //
-//  Created by Juan Miguel Fernández Lerena on 7/11/14.
+//  Created by Juan Miguel Fernández Lerena on 12/11/14.
 //  Copyright (c) 2014 jmfernandezlerenaios. All rights reserved.
 //
 
-#import "HomeViewController.h"
+#import "SettingsViewController.h"
 #import "TrackingService.h"
 #import "AlertsUI.h"
 
-@interface HomeViewController ()
+@interface SettingsViewController ()
 
 @end
 
-@implementation HomeViewController
+@implementation SettingsViewController
 
 #pragma NAVEGACIÓN.
 
@@ -45,7 +45,7 @@
         [super viewDidLoad];
         
         // TRACKING PANTALLA.
-        [[TrackingService sharedInstance] trackingToViewController:kTrackingToHomeViewController];
+        [[TrackingService sharedInstance] trackingToViewController:kTrackingToSettingsViewController];
     }
     @catch (NSException *exception)
     {
@@ -56,7 +56,7 @@
         [AlertsUI showAlertError:msgStr];
         // TRACKING EXEPTION.
         [[TrackingService sharedInstance] tranckingToExceptionWithDescription:[exception reason]
-                                                                       number:[NSNumber numberWithInt:kTrackingToHomeExceptionNumber]];
+                                                                       number:[NSNumber numberWithInt:kTrackingToSettingsExceptionNumber]];
     }
     @finally
     {
@@ -85,7 +85,7 @@
         [AlertsUI showAlertError:msgStr];
         // TRACKING EXEPTION.
         [[TrackingService sharedInstance] tranckingToExceptionWithDescription:[exception reason]
-                                                                       number:[NSNumber numberWithInt:kTrackingToHomeExceptionNumber]];
+                                                                       number:[NSNumber numberWithInt:kTrackingToSettingsExceptionNumber]];
     }
     @finally
     {
@@ -114,7 +114,7 @@
         [AlertsUI showAlertError:msgStr];
         // TRACKING EXEPTION.
         [[TrackingService sharedInstance] tranckingToExceptionWithDescription:[exception reason]
-                                                                       number:[NSNumber numberWithInt:kTrackingToHomeExceptionNumber]];
+                                                                       number:[NSNumber numberWithInt:kTrackingToSettingsExceptionNumber]];
     }
     @finally
     {
@@ -143,7 +143,7 @@
         [AlertsUI showAlertError:msgStr];
         // TRACKING EXEPTION.
         [[TrackingService sharedInstance] tranckingToExceptionWithDescription:[exception reason]
-                                                                       number:[NSNumber numberWithInt:kTrackingToHomeExceptionNumber]];
+                                                                       number:[NSNumber numberWithInt:kTrackingToSettingsExceptionNumber]];
     }
     @finally
     {
@@ -172,7 +172,7 @@
         [AlertsUI showAlertError:msgStr];
         // TRACKING EXEPTION.
         [[TrackingService sharedInstance] tranckingToExceptionWithDescription:[exception reason]
-                                                                       number:[NSNumber numberWithInt:kTrackingToHomeExceptionNumber]];
+                                                                       number:[NSNumber numberWithInt:kTrackingToSettingsExceptionNumber]];
     }
     @finally
     {
@@ -217,7 +217,7 @@
         [AlertsUI showAlertError:msgStr];
         // TRACKING EXEPTION.
         [[TrackingService sharedInstance] tranckingToExceptionWithDescription:[exception reason]
-                                                                       number:[NSNumber numberWithInt:kTrackingToHomeExceptionNumber]];
+                                                                       number:[NSNumber numberWithInt:kTrackingToSettingsExceptionNumber]];
     }
     @finally
     {
@@ -246,7 +246,7 @@
         [AlertsUI showAlertError:msgStr];
         // TRACKING EXEPTION.
         [[TrackingService sharedInstance] tranckingToExceptionWithDescription:[exception reason]
-                                                                       number:[NSNumber numberWithInt:kTrackingToHomeExceptionNumber]];
+                                                                       number:[NSNumber numberWithInt:kTrackingToSettingsExceptionNumber]];
     }
     @finally
     {
@@ -277,7 +277,7 @@
         [AlertsUI showAlertError:msgStr];
         // TRACKING EXEPTION.
         [[TrackingService sharedInstance] tranckingToExceptionWithDescription:[exception reason]
-                                                                       number:[NSNumber numberWithInt:kTrackingToHomeExceptionNumber]];
+                                                                       number:[NSNumber numberWithInt:kTrackingToSettingsExceptionNumber]];
     }
     @finally
     {
@@ -308,62 +308,6 @@
 #pragma DELEGACIONES.
 
 #pragma ACCIONES.
-
-#pragma mark unwindCancelFromSettingsScreen:
-/*!
- PANTALLA DE SETTINGS CANCELADA.
- */
-- (IBAction)unwindCancelFromSettingsScreen:(UIStoryboardSegue *)sender
-{
-    DDLogVerbose(([NSString stringWithFormat:@"%@...%@", NSStringFromClass([self class]), @"unwindCancelFromSettingsScreen:"]));
-    @try
-    {
-        
-    }
-    @catch (NSException *exception)
-    {
-        DDLogError(([NSString stringWithFormat:@"[ERROR] %@...%@", NSStringFromClass([self class]), [exception reason]]));
-        // MOSTRAR ALERTA A USUARIO.
-        NSDictionary *userInfoDictonary = [exception userInfo];
-        NSString *msgStr = [userInfoDictonary objectForKey:@"UserMessage"];
-        [AlertsUI showAlertError:msgStr];
-        // TRACKING EXEPTION.
-        [[TrackingService sharedInstance] tranckingToExceptionWithDescription:[exception reason]
-                                                                       number:[NSNumber numberWithInt:kTrackingToHomeExceptionNumber]];
-    }
-    @finally
-    {
-        
-    }
-}
-
-#pragma mark unwindDoneFromSettingsScreen:
-/*!
- PANTALLA DE SETTINGS MODIFICADA.
- */
-- (IBAction)unwindDoneFromSettingsScreen:(UIStoryboardSegue *)sender
-{
-    DDLogVerbose(([NSString stringWithFormat:@"%@...%@", NSStringFromClass([self class]), @"unwindDoneFromSettingsScreen:"]));
-    @try
-    {
-        
-    }
-    @catch (NSException *exception)
-    {
-        DDLogError(([NSString stringWithFormat:@"[ERROR] %@...%@", NSStringFromClass([self class]), [exception reason]]));
-        // MOSTRAR ALERTA A USUARIO.
-        NSDictionary *userInfoDictonary = [exception userInfo];
-        NSString *msgStr = [userInfoDictonary objectForKey:@"UserMessage"];
-        [AlertsUI showAlertError:msgStr];
-        // TRACKING EXEPTION.
-        [[TrackingService sharedInstance] tranckingToExceptionWithDescription:[exception reason]
-                                                                       number:[NSNumber numberWithInt:kTrackingToHomeExceptionNumber]];
-    }
-    @finally
-    {
-        
-    }
-}
 
 #pragma OBSERVADOR DE NOTIFICACIONES.
 

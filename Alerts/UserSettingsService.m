@@ -175,21 +175,8 @@ static UserSettingsService *_sharedInstance;
     BOOL InstalationStr = [defaults objectForKey:NSUserAppInstalled];
     // KEY: NAME.
     NSString *firstNameStr = [defaults objectForKey:NSUserFirstName];
-    if ([firstNameStr isKindOfClass:[NSString class]])
-    {
-        NSString *trimmedText = [firstNameStr stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
-        [defaults setValue:trimmedText
-                    forKey:NSUserFirstName];
-    }
     // KEY: NAME.
     NSString *lastNameStr = [defaults objectForKey:NSUserLastName];
-    {
-        NSString *trimmedText = [lastNameStr stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
-        [defaults setValue:trimmedText
-                    forKey:NSUserFirstName];
-    }
     // KEY: SOUNDS.
     NSString *soundStr =[defaults objectForKey:NSUserSounds];
     

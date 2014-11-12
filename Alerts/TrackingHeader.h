@@ -12,9 +12,13 @@
 // VIEW CONTROLLERS.
 /*! HOME. */
 #define kTrackingToHomeViewController                   @"HOME"
+/*! SETTINGS. */
+#define kTrackingToSettingsViewController               @"SETTINGS"
 
 // EXCEPTIONS.
 /*! HOME. */
 #define kTrackingToHomeExceptionNumber                  1
+/*! SETTINGS. */
+#define kTrackingToSettingsExceptionNumber              2
 
 #endif
